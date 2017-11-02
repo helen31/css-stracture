@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'Conv_Lato-Regular';
+    src: url('fonts/Lato-Regular.eot');
+    src: local('☺'), url('fonts/Lato-Regular.woff') format('woff'), url('fonts/Lato-Regular.ttf') format('truetype'), url('fonts/Lato-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+/**This applies before 640px**/
+body{
+    font-family: 'Conv_Lato-Regular', Serif;
+}
+
+.container {
+    margin: 30px;
+}
+
+*{
+    box-sizing: border-box;
+    outline: none;
+    font-weight: normal;
+    font-style: normal;
+}
+
+/**header**/
+.container__header{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.header{
+    height: 50px;
+    background-color: aqua;
+    display: table;
+    width: 100%;
+}
+.header h1{
+    display: table-cell;
+    vertical-align: middle;
+    height: inherit;
+}
+
+/**content**/
+.container__content{}
+
+.content{
+    webkit-column-count: 1;
+    -webkit-column-gap: 0;
+    -webkit-column-width: 100%;
+    column-count: 1;
+    column-gap: 0;
+    column-width: 100%;
+}
+
+.content__block{
+    background-color: lightgrey;
+    margin-top: 10px;
+}
+
+.content__block:first-child{
+    margin-top: 0;
+}
+
+.block{
+    padding: 10px 0;
+}
+
+h1{
+    font-size: 20px;
+    text-align: center;
+    color: #343434;
+    margin: 0;
+}
+
+.container__footer{
+    margin-top: 20px;
+}
+.footer{
+    height: 80px;
+    background-color: aqua;
+}
+
+/**This applies from 640px onwards**/
+
+@media (min-width: 640px) {
+    .content {
+        webkit-column-count: 2;
+        -webkit-column-gap: 20px;
+        -webkit-column-width: calc(100% / 2 - 10px);
+        column-count: 2;
+        column-gap: 20px;
+        column-width: calc(100% / 2 - 10px);
+    }
+}
